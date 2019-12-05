@@ -2,21 +2,23 @@ package com.cos.crud.model;
 
 import java.sql.Timestamp;
 
+import javax.xml.ws.BindingType;
+
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-@Data// getter, setter
+@Data
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-public class Post {
+public class User {
+	
 	private int id;
-	private String title;
-	private String content;
-	private int userId; //FK
-	private Timestamp createDate;
 	private String username;
+	private String password;
+	private String email;
+	private Timestamp createDate;
 	
 }

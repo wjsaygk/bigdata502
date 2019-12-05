@@ -7,21 +7,27 @@
 <title>Insert title here</title>
 </head>
 <body>
+<c:if test="${empty sessionScope.user}">
+	<script>
+		alert('인증이 안된 유저입니다.');
+		location.href = "/blog/user/login.jsp"
+	</script>
+</c:if>
+<!--================Contact Area =================-->
 <section class="contact_area">
 	<div class="container">
 		<div class="row">
 
 			<div class="col-lg-12">
-				<form class="row contact_form" action="/home/update" method="post" id="contactForm" novalidate="novalidate">
-				<input type = "hidden" name = "id" value = "${post.id }"/>
+				<form class="row contact_form" action="/post/wirte" method="post" id="contactForm" novalidate="novalidate">
 					<div class="col-md-12">
 						<div class="form-group">
-							<input type="text" class="form-control" id="title" name="title"  value ="${post.title}" placeholder="Title">
+							<input type="text" class="form-control" id="title" name="title" placeholder="Title">
 						</div>
 					</div>
 					<div class="col-md-12">
 						<div class="form-group">
-							<textarea class="form-control" name="content"  id="summernote">${post.content }</textarea>
+							<textarea class="form-control" name="content" id="summernote"></textarea>
 						</div>
 					</div>
 					<div class="col-md-12 text-right">

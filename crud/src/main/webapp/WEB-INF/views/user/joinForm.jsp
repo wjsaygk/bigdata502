@@ -1,4 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"    pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
 
 <head>
@@ -37,7 +38,7 @@
   <!-- Navigation -->
   <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
     <div class="container">
-     <a href="javascript:alert('힘내세용')" >빅데이터 3회차 화이팅</a>
+   <a href="javascript:alert('힘내세용')" >빅데이터 3회차 화이팅</a>
       <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
         Menu
         <i class="fas fa-bars"></i>
@@ -62,7 +63,7 @@
   </nav>
 
   <!-- Page Header -->
-  <header class="masthead" style="background-image: url('/resources/img/write.jpg')">
+  <header class="masthead" style="background-image: url('/resources/img/wel.jpg')">
     <div class="overlay"></div>
     <div class="container">
       <div class="row">
@@ -77,42 +78,25 @@
   </header>
 
   <!-- Main Content -->
-  <section class="contact_area">
-	<div class="container">
-		<div class="row">
-
-			<div class="col-lg-12">
-				<form action="/home/write" method="post">
-					<div class="col-md-12">
-						<div class="form-group">
-							<input type="text" class="form-control" id="title" name="title" placeholder="Title">
-						</div>
-					</div>
-					<div class="col-md-12">
-						<div class="form-group">
-							<textarea class="form-control" name="content" id="summernote"></textarea>
-						</div>
-					</div>
-					<div class="col-md-12 text-right">
-						<button type="submit" value="submit" class="btn submit_btn">Posting</button>
-					</div>
-					<input type="hidden" value="${sessionScope.user.id}" name="userId" />
-				</form>
-			</div>
-		</div>
-	</div>
-</section>
-
-
-
-    <div id="summernote"></div>
-    <script>
-      $('#summernote').summernote({
-        placeholder: 'Hello bootstrap 4',
-        tabsize: 2,
-        height: 200
-      });
-    </script>
+	<form action="/user/join" method="post">
+		<table>
+			<tr>
+				<th>Username</th>
+				<td><input type="text" name="username" /></td>
+			</tr>
+				<tr>
+				<th>Password</th>
+				<td><input type="password" name="password" /></td>
+			</tr>
+			<tr>
+				<th>Email</th>
+				<td><input type=email " name="email" /></td>
+			</tr>
+		
+				<td colspan="2"><input type="submit" value="가입완료" />
+			</tr>
+		</table>
+	</form>
 
 </body>
 

@@ -10,8 +10,8 @@ spring:
       suffix: .jsp 
       
   datasource:
-    url: jdbc:mysql://localhost:3306/cos?serverTimezone=Asia/Seoul
+    url: jdbc:mysql://localhost:3306/sari?serverTimezone=Asia/Seoul
     driver-class-name: com.mysql.cj.jdbc.Driver
-    username: cos
-    password: Bitc5600!
+    username: sari
+    password: bitc5600
 

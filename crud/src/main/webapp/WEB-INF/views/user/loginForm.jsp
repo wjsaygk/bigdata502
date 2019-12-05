@@ -1,4 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"    pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
 
 <head>
@@ -62,7 +63,7 @@
   </nav>
 
   <!-- Page Header -->
-  <header class="masthead" style="background-image: url('/resources/img/write.jpg')">
+  <header class="masthead" style="background-image: url('/resources/img/dog.jpg')">
     <div class="overlay"></div>
     <div class="container">
       <div class="row">
@@ -77,43 +78,18 @@
   </header>
 
   <!-- Main Content -->
-  <section class="contact_area">
-	<div class="container">
-		<div class="row">
-
-			<div class="col-lg-12">
-				<form action="/home/write" method="post">
-					<div class="col-md-12">
-						<div class="form-group">
-							<input type="text" class="form-control" id="title" name="title" placeholder="Title">
-						</div>
-					</div>
-					<div class="col-md-12">
-						<div class="form-group">
-							<textarea class="form-control" name="content" id="summernote"></textarea>
-						</div>
-					</div>
-					<div class="col-md-12 text-right">
-						<button type="submit" value="submit" class="btn submit_btn">Posting</button>
-					</div>
-					<input type="hidden" value="${sessionScope.user.id}" name="userId" />
-				</form>
-			</div>
-		</div>
-	</div>
-</section>
-
-
-
-    <div id="summernote"></div>
-    <script>
-      $('#summernote').summernote({
-        placeholder: 'Hello bootstrap 4',
-        tabsize: 2,
-        height: 200
-      });
-    </script>
-
-</body>
-
+		<form action="/user/login" method="POST">
+		<table>
+			<tr>
+				<th>Username</th>
+				<td><input type="text" name="username" /></td>
+			</tr>
+				<th>Password</th>
+				<td><input type="password" name="password" /></td>
+			</tr>
+			<tr>
+				<td colspan="2"><input type="submit" value="로그인" /></td>
+			</tr>
+		</table>
+	</form>
 </html>

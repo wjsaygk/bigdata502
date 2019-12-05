@@ -2,6 +2,7 @@ package com.cos.crud.repository;
 
 import java.util.List;
 
+
 import com.cos.crud.model.Post;
 
 //원래 방식은 @Reposity 가 필요하다.
